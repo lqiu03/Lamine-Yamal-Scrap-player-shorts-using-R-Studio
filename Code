@@ -1,0 +1,32 @@
+#SCRAP PLAYER SHOTS FROM UNDERSTATS R STUDIO
+
+# Install and load necessary packages
+install.packages("understatr")
+install.packages("dplyr")
+
+library(understatr)
+library(dplyr)
+
+# Replace with Lamine Yamal's actual player ID
+player_id <- 11527
+
+# Fetch the player's shot data
+player_shots <- get_player_shots(player_id)
+
+# View the first few rows of the data
+head(player_shots)
+
+# Filter shots from a particular season (if needed)
+player_shots_filtered <- player_shots %>%
+  filter(season == "2024")
+
+# Save the data to a CSV file
+write.csv(player_shots_filtered, "lamine_yamal_shots.csv")
+
+# Basic analysis example: Count shots per match
+shots_per_match <- player_shots_filtered %>%
+  group_by(match_id) %>%
+  summarise(shots = n())
+
+# View the result
+print(shots_per_match
