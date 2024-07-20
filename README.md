@@ -1,4 +1,4 @@
-# Lamine-Yamal-Scrap-player-shorts-using-R-Studio
+# Lamine-Yamal-Scrap-player-shots-using-R-Studio
 You can personalize this project and analyze virtually any player you please; 
 
 ---
